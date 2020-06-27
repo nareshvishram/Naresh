@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  {% load static %}
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Naresh</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{% static 'css/default.css' %}">
+	<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+   <link rel="stylesheet" href="{% static 'css/media-queries.css' %}">
+   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+<div class="container">
+<div class="row banner" style="margin-top:80px;">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Fill this form as Admin</h1>
+             <br>
+            <hr />
+         </div>
+      </div>
+
+
+<div class="row" style="margin-right:60px;">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               <form action="" method="post"  enctype="multipart/form-data">{% csrf_token %}
+					<fieldset>
+                        {% if validation_error %}
+                                 <p><h5 style="color:red;text-shadow:1px 1px green;">Sorry ! You are not Naresh</h5></p>
+                        {% endif %}
+                  <div>
+						   <label for="username">Username <span class="required">*</span></label>
+						   <input type="text"  size="70" id="username" name="un" placeholder="Enter Username">
+                  </div>
+
+                  <div>
+						   <label for="password">Password <span class="required">*</span></label>
+						   <input type="password" size="70" id="password" name="ps" placeholder="Enter Password">
+                  </div>
+
+
+                  <a>
+                     <button class="submit" type="submit">Submit</button>
+                      <a href="{% url 'index' %}"><button  type="button">Go to Main Page</button></a>
+
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+
+            </div>
+
+      </div>
+</div>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+
+   <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+   <script src="{% static 'js/waypoints.js' %}"></script>
+   <script src="{% static 'js/jquery.fittext.js' %}"></script>
+   <script src="{% static 'js/magnific-popup.js' %}"></script>
+   <script src="{% static 'js/init.js' %}"></script>
+
+</body>
+
+</html>

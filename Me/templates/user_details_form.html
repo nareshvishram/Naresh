@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <form class="form-horizontal" action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+      <h2>Fill the form</h2>
+      <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Name</label>
+          <div class="col-sm-6">
+              {{form.name}}
+       </div>
+     </div>
+
+
+
+    <div class="form-group">
+          <label class="control-label col-sm-2">Email:</label>
+          <div class="col-sm-6">
+              {{form.email}}
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Number:</label>
+          <div class="col-sm-6">
+              {{form.number}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">DOB:</label>
+      <div class="col-sm-6">
+          {{form.dob}}
+      </div>
+        </div>
+    </div>
+
+
+         <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Image:</label>
+          <div class="col-sm-6">
+              {{form.image}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">About</label>
+      <div class="col-sm-6">
+          {{form.about}}
+      </div>
+        </div>
+    </div>
+
+          <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">location:</label>
+          <div class="col-sm-6">
+              {{form.location}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Degree:</label>
+      <div class="col-sm-6">
+          {{form.degree}}
+      </div>
+        </div>
+    </div>
+
+
+          <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Website:</label>
+          <div class="col-sm-6">
+              {{form.website}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Twitter:</label>
+      <div class="col-sm-6">
+          {{form.tweeter}}
+      </div>
+        </div>
+    </div>
+
+
+          <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Facebook:</label>
+          <div class="col-sm-6">
+              {{form.facebook}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">LinkedIn:</label>
+      <div class="col-sm-6">
+          {{form.linkedin}}
+      </div>
+        </div>
+    </div>
+
+          <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Instagram:</label>
+          <div class="col-sm-6">
+              {{form.instagram}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Github:</label>
+      <div class="col-sm-6">
+          {{form.linkedin}}
+      </div>
+        </div>
+    </div>
+
+
+          <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Profile Title:</label>
+          <div class="col-sm-6">
+              {{form.profile_title}}
+       </div>
+     </div>
+
+      <hr>
+
+
+
+
+          <h3>Education Details</h3>
+          <h4>Education Details 1</h4>
+         <div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Name of Institute:</label>
+          <div class="col-sm-6">
+              {{edu_form.name}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Result (%) :</label>
+      <div class="col-sm-6">
+          {{edu_form.result}}
+      </div>
+        </div>
+    </div>
+
+
+
+<div class="row">
+       <div class="form-group">
+          <label class="control-label col-sm-2">Admission Date:</label>
+          <div class="col-sm-6">
+              {{edu_form.admission_date}}
+       </div>
+     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">Graduation Date :</label>
+      <div class="col-sm-6">
+          {{edu_form.graduate_date}}
+      </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+    </div>
+ </div>
+</form>
+
+</div>
+
+</body>
+</html>
